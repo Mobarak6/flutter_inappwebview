@@ -558,7 +558,7 @@ class InAppWebView extends StatefulWidget {
 class _InAppWebViewState extends State<InAppWebView> {
   @override
   Widget build(BuildContext context) {
-    return widget.platform.build(context);
+    return SafeArea(top: false, child: widget.platform.build(context));
   }
 
   @override
